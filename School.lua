@@ -63,7 +63,7 @@ local classFuncs = {
         local label = localPlayer.PlayerGui.EnglishClass.Frame.question
         return {
             label:GetPropertyChangedSignal("Text"):Connect(function()
-                classRemotes.English:FireServer(label.Parent.D.Answer.Value)
+                classRemotes.English:FireServer(tostring(label.Parent.D.Answer.Value))
             end)
         }   
     end,
